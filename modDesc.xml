@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>AustriaModding</author>
+	<contributor> DennisK</contributor>
+    <version>1.0.0.5</version>
+    <title>
+        <en>Dairybarn AustriaModding DK</en>
+        <de>Milchviehstall AustriaModding DK</de>
+    </title>
+    <description>
+	<en><![CDATA[This big catlebarn can hold up to 15oo cows with a large pasture.
+- Price: 350000€ ]]></en>
+
+        <de><![CDATA[Dieser große Milchviehstall bietet Platz für 1500 Kühe,
+- Preis: 350000€ ]]></de>
+    </description>
+    <iconFilename>icons/icon_dairybarn.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <storeItems>
+        <storeItem xmlFilename="xml/DairyBarn.xml"/>
+    </storeItems>
+
+    <l10n>
+        <text name="action_lightSwitchON">
+            <en>Lights on</en>
+            <de>Licht an</de>
+        </text>	
+        <text name="action_lightSwitchOFF">
+            <en>Lights off</en>
+            <de>Licht aus</de>
+        </text>			
+        <text name="shopItem_dairybarn">
+            <en>Dairy Barn</en>
+            <de>Milchviehstall</de>
+        </text>
+        <text name="function_dairybarn">
+            <en>Dairybarn for 1500 cows.</en>
+            <de>Milchviehstall für 1500 Kühe.</de>
+        </text>
+        <text name="action_TVon">
+            <en>TV on</en>
+            <de>TV an</de>
+        </text>
+        <text name="action_TVoff">Y
+            <en>TV off</en>
+            <de>TV aus</de>
+        </text>
+    </l10n>
+	
+	   <brands>
+        <brand name="DennisKgaming" title="DennisK edits" image="textures/AustriaModding.dds"/>
+    </brands>
+	
+	<extraSourceFiles>
+        <sourceFile filename="scripts/categorizer.lua"/>
+    </extraSourceFiles>
+	
+	<newcategory name="DennisK_edits" title="Placeable Dairy barn" type="PLACEABLES" img="Categories/CategoryPlaceables.png" />
+
+</modDesc>

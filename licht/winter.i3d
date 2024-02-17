@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="pigBarnBig" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+    </Asset>
+    <Files>
+        <File fileId="6" filename="$data/maps/textures/shared/props/icicles_diffuse.png"/>
+        <File fileId="7" filename="$data/maps/textures/shared/props/icicles_normal.png"/>
+        <File fileId="8" filename="$data/maps/textures/shared/props/icicles_specular.png"/>
+        <File fileId="1" filename="$data/maps/textures/shared/snow_diffuse.png"/>
+        <File fileId="2" filename="$data/maps/textures/shared/snow_normal.png"/>
+        <File fileId="3" filename="$data/maps/textures/shared/snow_specular.png"/>
+        <File fileId="4" filename="$data/shaders/snowHeapShader.xml"/>
+    </Files>
+    <Materials>
+        <Material name="icicles_mat" materialId="12" alphaBlending="true" customShaderId="4" customShaderVariation="icicle">
+            <Texture fileId="6"/>
+            <Normalmap fileId="7"/>
+            <Glossmap fileId="8"/>
+            <Refractionmap coeff="1" bumpScale="0.1"/>
+        </Material>
+        <Material name="snow_mat" materialId="11" customShaderId="4">
+            <Texture fileId="1"/>
+            <Normalmap fileId="2" bumpDepth="0.5"/>
+            <Glossmap fileId="3"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="winter.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <TransformGroup name="winter" translation="-8.01114 0.05 -2.52435e-31" nodeId="243">
+            <Shape shapeId="1" name="snow" translation="2.27374e-15 0 2.52435e-31" clipDistance="150" nodeId="244" materialIds="11" castsShadows="true" receiveShadows="true" weatherRequiredMask="1024"/>
+            <Shape shapeId="2" name="icicles" translation="2.27374e-15 0 2.52435e-31" clipDistance="100" nodeId="245" materialIds="12" castsShadows="true" receiveShadows="true" weatherRequiredMask="1024"/>
+        </TransformGroup>
+    </Scene>
+</i3D>

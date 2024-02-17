@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="cowHusbandry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>AustriaModding Dairy Farm DK</name>
+        <functions>
+            <function>$l10n_function_animalPenCow</function>
+        </functions>
+	====================================================================================================
+        <image>icons/store_dairybarn.dds</image>
+        <price>350000</price>
+    ====================================================================================================
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>DennisKgaming</brand>
+        <species>placeable</species>
+        <category>animalpens</category>
+	====================================================================================================
+		 <brush>
+            <type>placeable</type>
+            <category>animals</category>
+            <tab>cows</tab>
+        </brush>
+	====================================================================================================
+        <vertexBufferMemoryUsage>5529088</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>998912</indexBufferMemoryUsage>
+        <textureMemoryUsage>10289152</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    
+	
+	 <storeIconRendering>
+            <settings cameraXRot="-58.9" cameraYRot="0.917" advancedBoundingBox="true"/>
+        </storeIconRendering>
+        <audioMemoryUsage>0</audioMemoryUsage>
+  </storeData>
+	======================================================================================================
+	
+	 <base>
+         <filename>i3d/dairyBarn.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+	=======================================================================================================  
+   <placement useRandomYRotation="false" useManualYRotation="true" >
+         <testAreas>
+            <testArea startNode="testAreaStart" endNode="testAreaEnd" />
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+            
+        </testAreas> 
+    </placement>
+	======================================================================================================
+   <clearAreas>
+        <clearArea startNode="clearAreaStart" widthNode="clearAreaWidth" heightNode="clearAreaHeight"/>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+        <clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+        <clearArea startNode="clearArea4Start" widthNode="clearArea4Width" heightNode="clearArea4Height"/>
+        <clearArea startNode="clearArea5Start" widthNode="clearArea5Width" heightNode="clearArea5Height"/>
+        <clearArea startNode="clearArea6Start" widthNode="clearArea6Width" heightNode="clearArea6Height"/>
+      </clearAreas>  
+   =====================================================================================================================================    
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart" widthNode="levelAreaWidth" heightNode="levelAreaHeight"/>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height"/>
+            <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height"/>
+            <levelArea startNode="levelArea3Start" widthNode="levelArea3Width" heightNode="levelArea3Height"/>
+            <levelArea startNode="levelArea4Start" widthNode="levelArea4Width" heightNode="levelArea4Height"/>
+            <levelArea startNode="levelArea5Start" widthNode="levelArea5Width" heightNode="levelArea5Height"/>
+            <levelArea startNode="levelArea6Start" widthNode="levelArea6Width" heightNode="levelArea6Height"/>
+        </levelAreas> 
+	 ====================================================================================================================================	
+		<paintAreas>
+            <paintArea startNode="paintAreaStart" widthNode="paintAreaWidth" heightNode="paintAreaHeight" groundType="asphalt" />
+            <paintArea startNode="paintArea1Start" widthNode="paintArea1Width" heightNode="paintArea1Height" groundType="asphalt" />
+            <paintArea startNode="paintArea2Start" widthNode="paintArea2Width" heightNode="paintArea2Height" groundType="asphalt" />
+            <paintArea startNode="paintArea3Start" widthNode="paintArea3Width" heightNode="paintArea3Height" groundType="asphalt" />
+            <paintArea startNode="paintArea4Start" widthNode="paintArea4Width" heightNode="paintArea4Height" groundType="grass" />
+            <paintArea startNode="paintArea5Start" widthNode="paintArea5Width" heightNode="paintArea5Height" groundType="grass" />
+            <paintArea startNode="paintArea6Start" widthNode="paintArea6Width" heightNode="paintArea6Height" groundType="asphalt" />
+			
+        </paintAreas> 
+	
+    </leveling>
+	======================================================================================================================================	
+    <foliageAreas>
+		<!-- <foliageArea startNode="foliageArea1Start" widthNode="foliageArea1Width" heightNode="foliageArea1Height" decoFoliage="grassShort" /> --> <!-- can't be mowed -->
+        <foliageArea startNode="foliageAreaStart" widthNode="foliageAreaWidth" heightNode="foliageAreaHeight" fruitType="grass" /> <!-- mowable -->
+        <foliageArea startNode="foliageArea1Start" widthNode="foliageArea1Width" heightNode="foliageArea1Height" fruitType="grass" /> <!-- mowable -->
+       
+    </foliageAreas>
+	=====================================================================================================================================	
+	<indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+        <indoorArea startNode="indoorArea2Start" widthNode="indoorArea2Width" heightNode="indoorArea2Height"/>
+    </indoorAreas>
+	======================================================================================================================================
+    <triggerMarkers>
+		<triggerMarker node="markerMilk"         filename="marker/markerIcons1.xml" 					    id="MILK" />
+        <triggerMarker node="markerFood"         filename="marker/markerIcons1.xml"  				    id="FOOD" />
+        <triggerMarker node="markerAnimals"      filename="marker/markerIcons1.xml" 						id="ANIMALS" />
+        <triggerMarker node="markerLiquidManure" filename="marker/markerIcons1.xml" 						id="GUELLE" />
+        <triggerMarker node="markerLiquidWater"  filename="marker/markerIcons1.xml" 						id="WATER" />
+		
+		<triggerMarker node="markerStraw" 		 filename="marker/markerIcons1.xml"  					id="STRAW" />
+		<triggerMarker node="markerNetz" 		 filename="marker/markerIcons1.xml" 					    id="NETZ" />
+		<triggerMarker node="markerLicht" 		 filename="marker/markerIcons1.xml" 					    id="LIGHT" />
+	 </triggerMarkers>	
+   
+	======================================================================================================================================
+	<tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+	======================================================================================================================================	
+	<ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+	======================================================================================================================================	
+   <hotspots>
+        <hotspot type="COW" teleportNode="teleportNode" />
+    </hotspots>
+	======================================================================================================================================	
+     <animatedObject saveId="Stable_piglmanure">
+            <animation duration="4">
+                <part node="Deckel">
+                    <keyFrame time="0.0" translation="-0.29 0.494 0.106"/>
+                    <keyFrame time="0.5" translation="0.264 0.494 0.106"/>
+                </part>
+				<part node="Rohr">
+                    <keyFrame time="0.51" translation="-0.303 0.26 0.404"/>
+                    <keyFrame time="0.99" translation="-0.303 0.726 0.404"/>
+                </part>
+                <part node="TriggerNode">
+                    <keyFrame time="0.99" translation="-5.429 -3.186 1.322"/>
+                    <keyFrame time="1.00" translation="-5.429 -0.065 1.322"/>
+                </part>
+            </animation>
+            <controls triggerNode="lmanurePitTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openPit" negText="action_closepit"/>
+            <sounds>
+                <moving linkNode="Deckel" template="metalDoorsLoop" />
+            </sounds>
+        </animatedObject>
+     ============================================================================================================================================================  
+        <animatedObjects>
+		 <!-- Lights -->
+        <animatedObject saveId="light01" >
+            <animation duration="0.1">
+                <part node="light001"> <!-- light01 --> 
+                    <keyFrame time="0" visibility="false" />
+                    <keyFrame time="1" visibility="true" />
+                </part>
+            </animation>	
+            <controls triggerNode="lightTrigger1" posAction="ACTIVATE_HANDTOOL" posText="action_lightSwitchON" negText="action_lightSwitchOFF" />
+        </animatedObject>
+	===========================================================================================================================================
+        <animatedObject saveId="light02" >
+            <animation duration="0.1">
+                <part node="light002"> <!-- light02 --> 
+                    <keyFrame time="0" visibility="false" />
+                    <keyFrame time="1" visibility="true" />
+                </part>
+            </animation>	
+            <controls triggerNode="lightTrigger2" posAction="ACTIVATE_HANDTOOL" posText="action_lightSwitchON" negText="action_lightSwitchOFF" />
+        </animatedObject>
+	===========================================================================================================================================
+        <animatedObject saveId="light03" >
+            <animation duration="0.1">
+                 <part node="light003"> <!-- light03 --> 
+                    <keyFrame time="0" visibility="false" />
+                    <keyFrame time="1" visibility="true" />
+                </part>
+            </animation>	
+            <controls triggerNode="lightTrigger3" posAction="ACTIVATE_HANDTOOL" posText="action_lightSwitchON" negText="action_lightSwitchOFF" />
+        </animatedObject>
+	===========================================================================================================================================
+        <animatedObject saveId="light04" >
+            <animation duration="0.1">
+                 <part node="light004"> <!-- light04 --> 
+                    <keyFrame time="0" visibility="false" />
+                    <keyFrame time="1" visibility="true" />
+                </part>
+            </animation>	
+            <controls triggerNode="lightTrigger4" posAction="ACTIVATE_HANDTOOL" posText="action_lightSwitchON" negText="action_lightSwitchOFF" />
+        </animatedObject>
+	===========================================================================================================================================
+        <animatedObject saveId="light05" >
+            <animation duration="0.1">
+                <part node="light005"> <!-- light05 --> 
+                    <keyFrame time="0" visibility="false" />
+                    <keyFrame time="1" visibility="true" />
+                </part>
+            </animation>	
+            <controls triggerNode="lightTrigger5" posAction="ACTIVATE_HANDTOOL" posText="action_lightSwitchON" negText="action_lightSwitchOFF" />
+        </animatedObject>
+     ===========================================================================================================================================
+	 
+        <animatedObject saveId="door01" >
+            <animation duration="1.5">
+                <part node="tuer01">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+              
+            </animation>
+            <controls triggerNode="doorTrigger01" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+             <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger01" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger01" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger01" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	===============================================================================================
+        <animatedObject saveId="door02" >
+            <animation duration="1.5">
+                <part node="tuer02">
+                    <keyFrame time="0.0" rotation="0 180 0"/>
+                    <keyFrame time="1.0" rotation="0 300 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="doorTrigger02" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger02" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger02" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger02" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	====================================================================================================
+		<animatedObject saveId="door03" >
+            <animation duration="1.5">
+                <part node="tuer03">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="doorTrigger03" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger03" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger03" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger03" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	=====================================================================================================
+		<animatedObject saveId="door04" >
+            <animation duration="1.5">
+                <part node="tuer04">
+                    <keyFrame time="0.0" rotation="0 -90 0"/>
+                    <keyFrame time="1.0" rotation="0 20 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="doorTrigger04" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger04" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger04" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger04" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	=============================================================================================================
+		<animatedObject saveId="door05" >
+            <animation duration="1.5">
+                <part node="tuer05">
+                    <keyFrame time="0.0" rotation="0 90 0"/>
+                    <keyFrame time="1.0" rotation="0 220 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="doorTrigger05" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger05" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger05" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger05" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	================================================================================================================
+    
+        <animatedObject saveId="door06" >
+            <animation duration="1.5">
+                <part node="eingangrechts">
+                    <keyFrame time="0.0" rotation="0 12 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+                <part node="einganglinks">
+                    <keyFrame time="0.0" rotation="0 -12 0"/>
+                    <keyFrame time="1.0" rotation="0 -120 0"/>
+                </part>
+            </animation>
+             <controls triggerNode="doorTrigger06" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="doorTrigger06" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="doorTrigger06" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="doorTrigger06" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	================================================================================================================	
+		<!--Gates-->
+		
+		 <animatedObject saveId="gate01" >
+            <animation duration="1.5">
+                <part node="gate1">
+                   <keyFrame time="0.0" rotation="0 -90 0"/>
+                    <keyFrame time="1.0" rotation="0 10 0"/>
+                </part>
+               
+        </animation>
+        <controls triggerNode="gateTrigger01" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+        <sounds>
+            <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger01" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+            <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger01" volume="0.6" radius="25" innerRadius="3" />
+            <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger01" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+	=============================================================================================================================
+		
+		<animatedObject saveId="gate02" >
+            <animation duration="1.5">
+                <part node="gate2">
+                   <keyFrame time="0.0" rotation="0 90 0"/>
+                    <keyFrame time="1.0" rotation="0 -10 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger02" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+             <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger02" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger02" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger02" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		===============================================================================================================================
+		<animatedObject saveId="gate03" >
+            <animation duration="1.5">
+                <part node="gate3">
+                     <keyFrame time="0.0" rotation="0 -90 0"/>
+                    <keyFrame time="1.0" rotation="0 -190 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger03" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+             <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger03" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger03" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger03" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		===============================================================================================================================
+		<animatedObject saveId="gate04" >
+            <animation duration="1.5">
+                <part node="gate4">
+                     <keyFrame time="0.0" rotation="0 90 0"/>
+                    <keyFrame time="1.0" rotation="0 190 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger04" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger04" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger04" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger04" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		===============================================================================================================================
+		<animatedObject saveId="gate05" >
+            <animation duration="1.5">
+                <part node="gate5">
+                     <keyFrame time="0.0" rotation="0 90 0"/>
+                    <keyFrame time="1.0" rotation="0 190 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger05" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+             <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger05" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger05" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger05" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		================================================================================================================================
+			<animatedObject saveId="gate06" >
+            <animation duration="1.5">
+                <part node="gate6">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 90 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger06" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger06" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger06" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger06" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		=================================================================================================================================
+		<animatedObject saveId="gate07" >
+            <animation duration="1.5">
+                <part node="gate7">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -90 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger07" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger07" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger07" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger07" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		=================================================================================================================================
+		<animatedObject saveId="gate08" >
+            <animation duration="1.5">
+                <part node="gate8">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -90 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger08" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger08" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger08" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger08" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		=================================================================================================================================
+		<animatedObject saveId="gate09" >
+            <animation duration="1.5">
+                <part node="gate9">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -90 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger09" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger09" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger09" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger09" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		=================================================================================================================================
+		<animatedObject saveId="gate010" >
+            <animation duration="1.5">
+                <part node="gate10">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -90 0"/>
+                </part>
+               
+            </animation>
+            <controls triggerNode="gateTrigger10" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gateLoop.wav" loops="0" linkNode="gateTrigger10" volume="0.6" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gateOpened.wav" linkNode="gateTrigger10" volume="0.6" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gateClose.wav" linkNode="gateTrigger10" volume="0.6" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+		=================================================================================================================================
+		<animatedObject saveId="Telewizor" >
+            <animation duration="1">
+                <part node="ekran">
+                    <keyFrame time="0.0" visibility="false" />
+	                 <keyFrame time="0.01" visibility="true" />
+                </part>
+            </animation>
+            <controls triggerNode="TV_Trigger" posAction="ACTIVATE_HANDTOOL" posText="TV on" negText="TV off" />
+			</animatedObject>
+		=======================================================================================================================================================
+		<!--NETZ1-->
+	<animatedObject saveId="windbreaker" >
+            <animation duration="10">
+				<part node="lsfmUnicontrolSwitch">
+                    <keyFrame time="0.00" rotation="0 0 0"/>
+                    <keyFrame time="0.01" rotation="0 36 0"/>
+                    <keyFrame time="0.99" rotation="0 36 0"/>
+                    <keyFrame time="1.00" rotation="0 0 0"/>
+                </part>
+                <part node="netze_alle">
+                    <keyFrame time="0.00" scale="1 1 1"/>
+                    <keyFrame time="1.00" scale="1 0.15 1"/>
+                </part>
+			
+			</animation>
+            <controls triggerNode="windbreaker_trigger" posAction="ACTIVATE_HANDTOOL" posText="action_liftUpWindbreaker" negText="action_lowerDownWindbreaker" />
+            <sounds>
+                <moving file="sounds/elevator_loop_01.ogg" loops="0" linkNode="windbreaker_vis1" volume="1.0" radius="25" innerRadius="3" fadeOut="0.25"/>
+            </sounds>	
+        </animatedObject>
+		
+		============================================================================================================================================================
+
+		===========================================================================================================================================================================
+	
+	
+    </animatedObjects>
+	======================================================================================================================================
+	  <dynamicallyLoadedParts>
+       
+        <dynamicallyLoadedPart node="0" linkNode="controlBox" filename="$data/placeables/rudolfHormann/controlPanel/controlPanel.i3d">
+            <objectChange node="0|0" rotationActive="0 -120 0"/>
+            <objectChange node="0|1" rotationActive="0 120 0"/>
+        </dynamicallyLoadedPart>
+        <dynamicallyLoadedPart node="0" linkNode="milkContainer" filename="$data/placeables/lely/nautilus/nautilus.i3d"/>
+    </dynamicallyLoadedParts>
+	======================================================================================================================================
+	<infoTrigger triggerNode="infoTrigger" />
+	======================================================================================================================================
+	<husbandry saveId="Animals_COW" hasStatistics="false">
+		<storage node="storage" fillTypes="LIQUIDMANURE MILK STRAW MANURE WATER" isExtension="false">
+			<capacity fillType="LIQUIDMANURE"	capacity="8000000" />
+			<capacity fillType="MILK" 			capacity="8000000" />
+			<capacity fillType="STRAW" 			capacity="250000" />
+			<capacity fillType="MANURE" 		capacity="0" />
+			<capacity fillType="WATER" 			capacity="1800000" />
+		  
+			<fillPlane fillType="LIQUIDMANURE" node="slurryPit_fillPlane" minY="-2.292" maxY="1.459" />
+			
+			<fillPlane fillType="WATER" node="planeWater" minY="0" maxY="0.527" />
+			
+			<fillPlane fillType="MILK" node="plane_milch" minY="-2.092" maxY="1.294" />
+		 </storage>
+	===================================================================================================================================================================
+	<!--Unloading-->
+        <unloadingStation supportsExtension="true" storageRadius="105" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNodeStraw" fillTypes="STRAW">
+				<baleTrigger triggerNode="baleTriggerStraw"/>
+				<unloadTrigger fillTypes="MANURE MILK LIQUIDMANURE" />
+			</unloadTrigger>
+            <unloadTrigger exactFillRootNode="exactFillRootNodeWater" fillTypes="WATER"/>
+     </unloadingStation>
+ 	====================================================================================================================================================================
+	<!--Loading-->
+        <loadingStation supportsExtension="true" storageRadius="50">
+            <loadTrigger triggerNode="lqiuidManureTrigger" fillTypes="LIQUIDMANURE" fillLitersPerSecond="5000" aiNode="aiLoadingNodeLiquidManure" />
+            <loadTrigger triggerNode="milkTrigger" fillTypes="MILK" fillLitersPerSecond="5000" aiNode="aiLoadingNodeMilk"/>           
+        </loadingStation>
+	====================================================================================================================================================================
+	<!--Animals-->
+        <animals type="COW" maxNumAnimals="1500" maxNumVisualAnimals="100"> 
+            <navigation rootNode="navigationRootNode" filename="i3d/NavMesh.i3d" />
+            <loadingTrigger node="loadingTrigger" />
+        </animals>
+	=====================================================================================================================================================================
+	<!--Milk-->
+        <milk>
+            <milkingRobots>
+            <milkingRobot linkNode="milkingRobot1" class="MilkingRobot" filename="$data/placeables/lely/astronautA5/astronautA5.xml" />
+            <milkingRobot linkNode="milkingRobot2" class="MilkingRobot" filename="$data/placeables/lely/astronautA5/astronautA5.xml" />
+            <milkingRobot linkNode="milkingRobot3" class="MilkingRobot" filename="$data/placeables/lely/astronautA5/astronautA5.xml" />
+            </milkingRobots>
+        </milk>
+	======================================================================================================================================================================
+	<!--Straw-->
+        <straw>
+            <manure factor="1" />
+            <strawPlane node="strawPlanes" minY="-0.198" maxY="-0.05" colorChange="false" />
+        </straw>
+	=======================================================================================================================================================================
+	<!--Liquids-->
+        <water automaticWaterSupply="false" />
+		<liquidManure>
+			<manure active="true" factor="1"/>
+		</liquidManure>
+	=======================================================================================================================================================================
+	<!--Food-->
+         <food capacity="250000" >
+            <dynamicFoodPlane node="fillVolumeFood" defaultFillType="forage"/>
+			<dynamicFoodPlane node="fillVolumeFood01" defaultFillType="forage"/>
+			
+            <feedingTrough exactFillRootNode="exactFillRootNodeFood">
+				<baleTrigger triggerNode="baleTrigger"/>
+            </feedingTrough>
+			
+            <foodPlaces>
+                <foodPlace node="foodPlace1" />
+                <foodPlace node="foodPlace2" />
+                <foodPlace node="foodPlace3" />
+                <foodPlace node="foodPlace4" />
+                <foodPlace node="foodPlace5" />
+                <foodPlace node="foodPlace6" />
+                <foodPlace node="foodPlace7" />
+                <foodPlace node="foodPlace8" />
+                <foodPlace node="foodPlace9" />
+				<foodPlace node="foodPlace10" />
+                <foodPlace node="foodPlace11" />
+                <foodPlace node="foodPlace12" />
+                <foodPlace node="foodPlace13" />
+            </foodPlaces>
+        </food>
+	 </husbandry>
+	===========================================================================================================================================================================
+	<!--TipArea-->
+     <tipOcclusionUpdateArea sizeX="30" sizeZ="25" />
+	============================================================================================================================================================================
+	<i3dMappings>
+		 <!--ClearArea-->
+		<i3dMapping id="clearAreaStart" 					node="0>6|0" />
+		<i3dMapping id="clearAreaWidth" 					node="0>6|0|0" /> 
+		<i3dMapping id="clearAreaHeight" 					node="0>6|0|1" />
+		<i3dMapping id="clearArea1Start" 					node="0>6|1" />
+		<i3dMapping id="clearArea1Width" 					node="0>6|1|0" /> 
+		<i3dMapping id="clearArea1Height" 					node="0>6|1|1" />
+		<i3dMapping id="clearArea2Start" 					node="0>6|2" />
+		<i3dMapping id="clearArea2Width" 					node="0>6|2|0" /> 
+		<i3dMapping id="clearArea2Height" 					node="0>6|2|1" />
+		<i3dMapping id="clearArea3Start" 					node="0>6|3" />
+		<i3dMapping id="clearArea3Width" 					node="0>6|3|0" /> 
+		<i3dMapping id="clearArea3Height" 					node="0>6|3|1" />
+		<i3dMapping id="clearArea4Start" 					node="0>6|4" />
+		<i3dMapping id="clearArea4Width" 					node="0>6|4|0" /> 
+		<i3dMapping id="clearArea4Height" 					node="0>6|4|1" />
+		<i3dMapping id="clearArea5Start" 					node="0>6|5" />
+		<i3dMapping id="clearArea5Width" 					node="0>6|5|0" /> 
+		<i3dMapping id="clearArea5Height" 					node="0>6|5|1" />
+		<i3dMapping id="clearArea6Start" 					node="0>6|6" />
+		<i3dMapping id="clearArea6Width" 					node="0>6|6|0" /> 
+		<i3dMapping id="clearArea6Height" 					node="0>6|6|1" />
+		  <!--LevelArea-->
+		<i3dMapping id="levelAreaStart" 					node="0>7|0" />
+		<i3dMapping id="levelAreaWidth" 					node="0>7|0|0" />
+		<i3dMapping id="levelAreaHeight" 					node="0>7|0|1" />
+		<i3dMapping id="levelArea1Start" 					node="0>7|1" />
+		<i3dMapping id="levelArea1Width" 					node="0>7|1|0" />
+		<i3dMapping id="levelArea1Height" 					node="0>7|1|1" />
+		<i3dMapping id="levelArea2Start" 					node="0>7|2" />
+		<i3dMapping id="levelArea2Width" 					node="0>7|2|0" />
+		<i3dMapping id="levelArea2Height" 					node="0>7|2|1" />
+		<i3dMapping id="levelArea3Start" 					node="0>7|3" />
+		<i3dMapping id="levelArea3Width" 					node="0>7|3|0" />
+		<i3dMapping id="levelArea3Height" 					node="0>7|3|1" />
+		<i3dMapping id="levelArea4Start" 					node="0>7|4" />
+		<i3dMapping id="levelArea4Width" 					node="0>7|4|0" />
+		<i3dMapping id="levelArea4Height" 					node="0>7|4|1" />
+		<i3dMapping id="levelArea5Start" 					node="0>7|5" />
+		<i3dMapping id="levelArea5Width" 					node="0>7|5|0" />
+		<i3dMapping id="levelArea5Height" 					node="0>7|5|1" />
+		<i3dMapping id="levelArea6Start" 					node="0>7|6" />
+		<i3dMapping id="levelArea6Width" 					node="0>7|6|0" />
+		<i3dMapping id="levelArea6Height" 					node="0>7|6|1" />
+		
+		 <!--Paint-->
+		<i3dMapping id="paintAreaStart" 					node="0>49|0" />
+		<i3dMapping id="paintAreaWidth" 					node="0>49|0|0" />
+		<i3dMapping id="paintAreaHeight" 					node="0>49|0|1" />
+		<i3dMapping id="paintArea1Start" 					node="0>49|1" />
+		<i3dMapping id="paintArea1Width" 					node="0>49|1|0" />
+		<i3dMapping id="paintArea1Height" 					node="0>49|1|1" />
+		<i3dMapping id="paintArea2Start" 					node="0>49|2" />
+		<i3dMapping id="paintArea2Width" 					node="0>49|2|0" />
+		<i3dMapping id="paintArea2Height" 					node="0>49|2|1" />
+		<i3dMapping id="paintArea3Start" 					node="0>49|3" />
+		<i3dMapping id="paintArea3Width" 					node="0>49|3|0" />
+		<i3dMapping id="paintArea3Height" 					node="0>49|3|1" />
+		<i3dMapping id="paintArea4Start" 					node="0>49|4" />
+		<i3dMapping id="paintArea4Width" 					node="0>49|4|0" />
+		<i3dMapping id="paintArea4Height" 					node="0>49|4|1" />
+		<i3dMapping id="paintArea5Start" 					node="0>49|5" />
+		<i3dMapping id="paintArea5Width" 					node="0>49|5|0" />
+		<i3dMapping id="paintArea5Height" 					node="0>49|5|1" />
+		<i3dMapping id="paintArea6Start" 					node="0>49|6" />
+		<i3dMapping id="paintArea6Width" 					node="0>49|6|0" />
+		<i3dMapping id="paintArea6Height" 					node="0>49|6|1" />
+	   
+
+		 <!--Food-->	
+		<i3dMapping id="exactFillRootNodeFood"	 			node="0>0|2" />
+		<i3dMapping id="foodPlace1" 						node="0>0|1|0" />
+		<i3dMapping id="foodPlace2" 						node="0>0|1|1" />
+		<i3dMapping id="foodPlace3" 						node="0>0|1|2" />
+		<i3dMapping id="foodPlace4" 						node="0>0|1|3" />
+		<i3dMapping id="foodPlace5" 						node="0>0|1|4" />
+		<i3dMapping id="foodPlace6" 						node="0>0|1|5" />
+		<i3dMapping id="foodPlace7" 						node="0>0|1|6" />
+		<i3dMapping id="foodPlace8" 						node="0>0|1|8" />
+		<i3dMapping id="foodPlace9" 						node="0>0|1|8" />
+		<i3dMapping id="foodPlace10" 						node="0>0|1|9" />
+		<i3dMapping id="foodPlace11" 						node="0>0|1|10" />
+		<i3dMapping id="foodPlace12" 						node="0>0|1|11" />
+		<i3dMapping id="foodPlace13" 						node="0>0|1|12" />
+		
+		<i3dMapping id="baleTrigger" 						node="0>0|0" />
+		<i3dMapping id="fillVolumeFood" 					node="0>0|3" />
+		
+		 <!--Animals-->
+		<i3dMapping id="loadingTrigger" 					node="0>29"/>
+		
+		 <!--Water-->
+		<i3dMapping id="exactFillRootNodeWater" 			node="0>1|0|0" />
+		<i3dMapping id="planeWater" 						node="0>1|1"/>
+
+		 <!--Straw-->
+		<i3dMapping id="baleTriggerStraw" 					node="0>2|1" />
+		<i3dMapping id="exactFillRootNodeStraw" 			node="0>2|0" />
+		<i3dMapping id="strawPlanes" 						node="0>2|2" />
+		
+		 <!--Slurry-->
+		<i3dMapping id="slurryPit_fillPlane" 				node="0>46|1|0|0|0" />
+		<i3dMapping id="lqiuidManureTrigger" 				node="0>46|3|0" />
+		<i3dMapping id="aiLoadingNodeLiquidManure" 		node="0>46|3|1" />
+
+
+		 <!--Milk-->
+		<i3dMapping id="milkingRobot1" 						node="0>4|1|0"/>
+		<i3dMapping id="milkingRobot2" 						node="0>4|1|1"/>
+		<i3dMapping id="milkingRobot3" 						node="0>4|1|2"/>
+		<i3dMapping id="aiLoadingNodeMilk" 					node="0>4|1|3"/>
+		
+		<i3dMapping id="milkTrigger" 						node="0>4|0"/>
+		<i3dMapping id="milkContainer" 						node="0>4|2"/>
+		<i3dMapping id="plane_milch" 						node="0>4|3|2" /> 
+
+		 <!--Misc-->
+		<i3dMapping id="storage" 							node="0>27"/>
+		<i3dMapping id="infoTrigger" 						node="0>26"/>
+		<i3dMapping id="navigationRootNode" 				node="0>28" />
+		
+		<i3dMapping id="teleportNode" 						node="0>25" />
+
+		 <!--Gates-->
+		<i3dMapping id="gateTrigger01" 						node="0>11|0"/>
+		<i3dMapping id="gateTrigger02" 						node="0>12|0"/>
+		<i3dMapping id="gateTrigger03" 						node="0>13|0" />
+		<i3dMapping id="gateTrigger04" 						node="0>14|0" />
+		<i3dMapping id="gateTrigger05" 						node="0>15|0" />
+		<i3dMapping id="gateTrigger06" 						node="0>16|0" />
+		<i3dMapping id="gateTrigger07" 						node="0>48|0|3|0" />
+		<i3dMapping id="gateTrigger08" 						node="0>48|0|4|0" />
+		<i3dMapping id="gateTrigger09" 						node="0>48|1|3|0" />
+		<i3dMapping id="gateTrigger10" 						node="0>48|1|4|0" />
+		
+		<i3dMapping id="gate1" 								node="0>11|1"/>
+		<i3dMapping id="gate2" 								node="0>12|1"/>
+		<i3dMapping id="gate3" 								node="0>13|1" />
+		<i3dMapping id="gate4" 								node="0>14|1" />
+		<i3dMapping id="gate5" 								node="0>15|1" />
+		<i3dMapping id="gate6" 								node="0>16|1" />
+		<i3dMapping id="gate7" 								node="0>48|0|3|1" />
+		<i3dMapping id="gate8" 								node="0>48|0|4|1" />
+		<i3dMapping id="gate9" 								node="0>48|1|3|1" />
+		<i3dMapping id="gate10" 							node="0>48|1|4|1" />
+		
+		<i3dMapping id="gate01" 							node="0>11"/>
+		<i3dMapping id="gate02" 							node="0>12"/>
+		<i3dMapping id="gate03" 							node="0>13" />
+		<i3dMapping id="gate04" 							node="0>14" />
+		<i3dMapping id="gate05" 							node="0>15" />
+		<i3dMapping id="gate06" 							node="0>16" />
+		<i3dMapping id="gate07" 							node="0>48|0|3" />
+		<i3dMapping id="gate08" 							node="0>48|0|4" />
+		<i3dMapping id="gate09" 							node="0>48|1|3" />
+		<i3dMapping id="gate010" 							node="0>48|1|4" />
+		
+		 <!--Doors-->
+		<i3dMapping id="doorTrigger01" 						node="0>18|1"/>
+		<i3dMapping id="doorTrigger02" 						node="0>19|1"/>
+		<i3dMapping id="doorTrigger03" 						node="0>20|1"/>
+		<i3dMapping id="doorTrigger04" 						node="0>21|1"/>
+		<i3dMapping id="doorTrigger05" 						node="0>22|1"/>	
+		<i3dMapping id="doorTrigger06" 						node="0>23|2" />
+		
+		<i3dMapping id="door01" 							node="0>18"/>
+		<i3dMapping id="door02" 							node="0>19"/>
+		<i3dMapping id="door03" 							node="0>20"/>
+		<i3dMapping id="door04" 							node="0>21"/>
+		<i3dMapping id="door05" 							node="0>22"/>
+		<i3dMapping id="door06" 							node="0>23"/>
+		<i3dMapping id="eingangrechts" 						node="0>23|0" />
+		<i3dMapping id="einganglinks" 						node="0>23|1" />
+		<i3dMapping id="tuer01" 							node="0>18|0"/>
+		<i3dMapping id="tuer02" 							node="0>19|0"/>
+		<i3dMapping id="tuer03" 							node="0>20|0"/>
+		<i3dMapping id="tuer04" 							node="0>21|0"/>
+		<i3dMapping id="tuer05" 							node="0>22|0"/>
+		
+		<i3dMapping id="windowstuerRechts" 					node="0>23|0|0" />
+		<i3dMapping id="windowstuerLinks" 					node="0>23|1|0" />
+		
+		 <!--Warning stripes-->
+		<i3dMapping id="warningStripes" 					node="0>10"/>
+		<i3dMapping id="warningStripesAnimalLoadTrigger" 	node="0>10|0"/>
+		
+		<i3dMapping id="warningStripesLiquidManureTrigger" 	node="0>10|2" />
+		<i3dMapping id="warningStripesFutter" 				node="0>36" />
+		<i3dMapping id="warningStripesMilkTankTrigger" 		node="0>10|3" />
+		<i3dMapping id="warningStripesStroh" 				node="0>37" />
+		
+		 <!--Marker-->
+		<i3dMapping id="markerMilk" 						node="0>10|4"/>
+		<i3dMapping id="markerAnimals" 						node="0>10|5"/>
+		<i3dMapping id="markerLiquidManure" 				node="0>10|6"/>
+		<i3dMapping id="markerFood" 						node="0>10|7" />
+		<i3dMapping id="markerLicht" 						node="0>10|8" />
+		<i3dMapping id="markerLiquidWater" 					node="0>10|9"/>	
+		<i3dMapping id="markerNetz" 						node="0>10|10" />
+		<i3dMapping id="markerStraw" 						node="0>10|11"/>
+
+		 <!--Mil Carrousel-->
+		<i3dMapping id="melkkarussel01" 					node="0>24|0" />
+		
+		 <!--Control-->
+		<i3dMapping id="controlBox" 						node="0>30" />
+		
+		<!--Tip-->
+		<i3dMapping id="tipOcclusionUpdateArea1Start" 		node="0>32|0" />
+		<i3dMapping id="tipOcclusionUpdateArea1End" 		node="0>32|0|0" />
+			
+		 <!--Indoor-->
+		<i3dMapping id="indoorArea1Start"					node="0>33|0" />
+		<i3dMapping id="indoorArea1Width" 					node="0>33|0|0" />
+		<i3dMapping id="indoorArea1Height" 					node="0>33|0|1" />
+		<i3dMapping id="indoorArea2Start" 					node="0>33|1" />
+		<i3dMapping id="indoorArea2Width" 					node="0>33|1|0" />
+		<i3dMapping id="indoorArea2Height" 					node="0>33|1|1" />
+			
+		 <!--FoliageArea-->
+		<i3dMapping id="foliageAreaStart" 					node="0>9|0" />
+		<i3dMapping id="foliageAreaWidth" 					node="0>9|0|0" />
+		<i3dMapping id="foliageAreaHeight" 					node="0>9|0|1" />
+		<i3dMapping id="foliageArea1Start" 					node="0>9|1" />
+		<i3dMapping id="foliageArea1Width" 					node="0>9|1|0" />
+		<i3dMapping id="foliageArea1Height" 				node="0>9|1|1" />
+			
+		 <!--Test-->
+		<i3dMapping id="testAreaStart" 						node="0>34|0" />
+		<i3dMapping id="testAreaEnd" 						node="0>34|0|0" />
+		<i3dMapping id="testArea1Start" 					node="0>34|1" />
+		<i3dMapping id="testArea1End" 						node="0>34|1|0" />
+		<i3dMapping id="testArea2Start" 					node="0>34|2" />
+		<i3dMapping id="testArea2End" 						node="0>34|2|0" />
+
+		 <!--Lights-->  
+		<i3dMapping id="light01" 							node="0>38" /> 
+		<i3dMapping id="light02" 							node="0>39" />
+		<i3dMapping id="light03" 							node="0>40" /> 
+		<i3dMapping id="light04" 							node="0>41" />
+		<i3dMapping id="light05" 							node="0>42" />
+		<i3dMapping id="lightTrigger1" 						node="0>38|0" /> 
+		<i3dMapping id="lightTrigger2" 						node="0>39|0" />
+		<i3dMapping id="lightTrigger3" 						node="0>40|0" /> 
+		<i3dMapping id="lightTrigger4" 						node="0>41|0" />
+		<i3dMapping id="lightTrigger5" 						node="0>42|0" />
+		<i3dMapping id="lightTrigger01" 					node="0>38|0|0" /> 
+		<i3dMapping id="lightTrigger02" 					node="0>38|0|1" />
+		<i3dMapping id="lightTrigger03" 					node="0>38|0|2" /> 
+		<i3dMapping id="lightTrigger04" 					node="0>39|0|0" />
+		<i3dMapping id="lightTrigger05" 					node="0>39|0|1" />
+		<i3dMapping id="lightTrigger06" 					node="0>39|0|2" /> 
+		<i3dMapping id="lightTrigger07" 					node="0>40|0|0" />
+		<i3dMapping id="lightTrigger08" 					node="0>41|0|0" /> 
+		<i3dMapping id="lightTrigger09" 					node="0>42|0|0" />
+		<i3dMapping id="lightTrigger10" 					node="0>42|0|1" />
+		<i3dMapping id="light001" 							node="0>38|1" /> 
+		<i3dMapping id="light002" 							node="0>39|1" />
+		<i3dMapping id="light003" 							node="0>40|1" /> 
+		<i3dMapping id="light004" 							node="0>41|1" />
+		<i3dMapping id="light005" 							node="0>42|1" />
+		
+		 <!--Snow-->
+		<i3dMapping id="snow" 								node="0>43|1" />
+		<i3dMapping id="icicles" 							node="0>43|0" />
+		
+		 <!--Windbreakers-->
+		<i3dMapping id="windbreaker" 						node="0>45" />
+		<i3dMapping id="windbreaker_trigger" 				node="0>45|0" />
+		<i3dMapping id="lsfmUnicontrolSwitch" 				node="0>45|2|0|0" />
+		<i3dMapping id="netze"		   						node="0>45|3"/>
+		<i3dMapping id="netze_alle"		   					node="0>45|3|0"/>
+		
+		<i3dMapping id="windbreakBox1" 						node="0>45|3|0|0" />
+		<i3dMapping id="windbreakBox2" 						node="0>45|3|0|1" />
+		<i3dMapping id="windbreakBox3" 						node="0>45|3|0|2" />
+		<i3dMapping id="windbreakBox4" 						node="0>45|3|0|3" />
+		<i3dMapping id="windbreakBox5" 						node="0>45|3|0|4" />
+		<i3dMapping id="windbreakBox6" 						node="0>45|3|0|5" />
+		<i3dMapping id="windbreakBox7" 						node="0>45|3|0|6" />
+		<i3dMapping id="windbreakBox8" 						node="0>45|3|0|7" />
+		<i3dMapping id="windbreakBox9" 						node="0>45|3|0|8" />
+		<i3dMapping id="windbreakBox10" 					node="0>45|3|0|9" />
+		<i3dMapping id="windbreakBox11" 					node="0>45|3|0|10" />
+		<i3dMapping id="windbreakBox12" 					node="0>45|3|0|11" />
+		<i3dMapping id="windbreakBox13" 					node="0>45|3|0|12" />
+		<i3dMapping id="windbreakBox14" 					node="0>45|3|0|13" />
+		<i3dMapping id="windbreakBox15" 					node="0>45|3|0|14" />
+		<i3dMapping id="windbreakBox16" 					node="0>45|3|0|15" />
+		<i3dMapping id="windbreakBox17" 					node="0>45|3|0|16" />
+		
+		<i3dMapping id="windbreaker_vis1" 					node="0>45|3|0|0" />
+		<i3dMapping id="windbreaker_vis2" 					node="0>45|3|0|1|0" />
+		<i3dMapping id="windbreaker_vis3" 					node="0>45|3|0|2|0" />
+		<i3dMapping id="windbreaker_vis4" 					node="0>45|3|0|3|0" />
+		<i3dMapping id="windbreaker_vis5" 					node="0>45|3|0|4|0" />
+		<i3dMapping id="windbreaker_vis6" 					node="0>45|3|0|5|0" />
+		<i3dMapping id="windbreaker_vis7" 					node="0>45|3|0|6|0" />
+		<i3dMapping id="windbreaker_vis8" 					node="0>45|3|0|7|0" />
+		<i3dMapping id="windbreaker_vis9" 					node="0>45|3|0|8|0" />
+		<i3dMapping id="windbreaker_vis10" 					node="0>45|3|0|9" />
+		<i3dMapping id="windbreaker_vis11" 					node="0>45|3|0|10" />
+		<i3dMapping id="windbreaker_vis12" 					node="0>45|3|0|11" />
+		<i3dMapping id="windbreaker_vis13" 					node="0>45|3|0|12" />
+		<i3dMapping id="windbreaker_vis14" 					node="0>45|3|0|13" />
+		<i3dMapping id="windbreaker_vis15" 					node="0>45|3|0|14" />
+		<i3dMapping id="windbreaker_vis16" 					node="0>45|3|0|15" />
+		<i3dMapping id="windbreaker_vis17" 					node="0>45|3|0|16" />
+		
+		<i3dMapping id="windbreaker_col" 					node="0>45|3|0|0|1" />
+		<i3dMapping id="windbreaker_co2" 					node="0>45|3|0|1|1" />
+		<i3dMapping id="windbreaker_co3" 					node="0>45|3|0|2|1" />
+		<i3dMapping id="windbreaker_co4" 					node="0>45|3|0|3|1" />
+		<i3dMapping id="windbreaker_co5" 					node="0>45|3|0|4|1" />
+		<i3dMapping id="windbreaker_co6" 					node="0>45|3|0|5|1" />
+		<i3dMapping id="windbreaker_co7" 					node="0>45|3|0|6|1" />
+		<i3dMapping id="windbreaker_co8" 					node="0>45|3|0|7|1" />
+		<i3dMapping id="windbreaker_co9" 					node="0>45|3|0|8|1" />
+		<i3dMapping id="windbreaker_col0" 					node="0>45|3|0|9|1" />
+		<i3dMapping id="windbreaker_col1" 					node="0>45|3|0|10|1" />
+		<i3dMapping id="windbreaker_col2" 					node="0>45|3|0|11|1" />
+		<i3dMapping id="windbreaker_col3" 					node="0>45|3|0|12|1" />
+		<i3dMapping id="windbreaker_col4" 					node="0>45|3|0|13|1" />
+		<i3dMapping id="windbreaker_col5" 					node="0>45|3|0|14|1" />
+		<i3dMapping id="windbreaker_col6" 					node="0>45|3|0|15|1" />
+		<i3dMapping id="windbreaker_col7" 					node="0>45|3|0|16|1" />
+		
+		<i3dMapping id="persp2" 							node="0>47"/>
+		 
+		<i3dMapping id="Telewizor" 						node="0>5|15|14" />
+		<i3dMapping id="ekran" 							node="0>5|15|14|0" />
+		<i3dMapping id="TV_Trigger" 						node="0>5|15|14|2" />
+
+	 </i3dMappings>
+	 
+</placeable>

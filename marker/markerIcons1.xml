@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<markerIcons>
+    <filename>marker/markerIcons1.i3d</filename>
+    <variations>
+       
+        <variation node="0|0" id="FOOD" />
+        <variation node="0|1" id="LIGHT" />
+		<variation node="0|2" id="WATER" />
+		<variation node="0|3" id="ANIMALS" />
+		<variation node="0|4" id="NETZ" />
+		<variation node="0|5" id="GUELLE" />
+		<variation node="0|6" id="MILK" />
+		<variation node="0|7" id="STRAW" />
+      </variations>
+</markerIcons>
+       
+        
+        
+       
+		
+		
